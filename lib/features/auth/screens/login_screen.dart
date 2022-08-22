@@ -2,6 +2,7 @@ import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:voip_chat/common/utils/colors.dart';
 import 'package:voip_chat/common/widgets/custom_button.dart';
+import 'package:voip_chat/features/auth/screens/otp_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/login-screen';
@@ -14,6 +15,11 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final phoneController = TextEditingController();
   Country? country;
+
+  // temp code
+  void navigateToLoginScreen(BuildContext context) {
+    Navigator.pushNamed(context, OTPScreen.routeName);
+  }
 
   @override
   void dispose() {
@@ -83,7 +89,9 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 width: 90,
                 child: CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    navigateToLoginScreen(context);
+                  },
                   text: 'NEXT',
                 ),
               ),
