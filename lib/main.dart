@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_core/firebase_core.dart' show Firebase;
 import 'package:voip_chat/features/landing/landing_screen.dart';
-import 'package:voip_chat/router.dart';
+import 'package:voip_chat/router.dart' show generateRoute;
 import 'firebase_options.dart';
 
 void main() async {
