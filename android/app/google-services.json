@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "485275093096",
+    "project_id": "voip-chat-mkb",
+    "storage_bucket": "voip-chat-mkb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485275093096:android:1a869551226e3dc548d3dd",
+        "android_client_info": {
+          "package_name": "com.example.voip_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485275093096-tciksbla1tk5755cop248s07mq8i26fk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe5LAR1oJdoqq3h8ikF3pBFzMQ4TDblfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485275093096-tciksbla1tk5755cop248s07mq8i26fk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "485275093096-s25nuubostg1uas1jqh3eihri21tofq8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.voipChat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
