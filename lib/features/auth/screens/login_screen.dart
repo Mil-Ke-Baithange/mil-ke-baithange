@@ -16,11 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final phoneController = TextEditingController();
   Country? country;
 
-  // temp code
-  void navigateToLoginScreen(BuildContext context) {
-    Navigator.pushNamed(context, OTPScreen.routeName);
-  }
-
   @override
   void dispose() {
     super.dispose();
@@ -89,9 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 width: 90,
                 child: CustomButton(
-                  onPressed: () {
-                    navigateToLoginScreen(context);
-                  },
+                  onPressed: () {},
                   text: 'NEXT',
                 ),
               ),

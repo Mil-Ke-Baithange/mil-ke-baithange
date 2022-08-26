@@ -16,28 +16,14 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String os = Platform.operatingSystem;
-    return os == 'ios'
-        ? CupertinoButton(
-            onPressed: onPressed,
-            child: Text(
-              text,
-              style: const TextStyle(
-                color: tabColor,
-              ),
-            ),
-          )
-        : ElevatedButton(
-            onPressed: onPressed,
-            style: ElevatedButton.styleFrom(
-              primary: tabColor,
-              minimumSize: const Size(double.infinity, 50),
-            ),
-            child: Text(
-              text,
-              style: const TextStyle(
-                color: blackColor,
-              ),
-            ),
-          );
+    return CupertinoButton(
+      onPressed: onPressed,
+      child: Text(
+        text,
+        style: const TextStyle(
+          color: tabColor,
+        ),
+      ),
+    );
   }
 }
