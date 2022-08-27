@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:voip_chat/common/widgets/error.dart';
 import 'package:voip_chat/features/auth/screens/login_screen.dart';
 import 'package:voip_chat/features/auth/screens/otp_screen.dart';
+import 'package:voip_chat/features/auth/screens/user_info_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -15,6 +16,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         builder: (context) => OTPScreen(
           verificationId: verificationId,
         ),
+      );
+    case UserInformationScreen.routeName:
+      return MaterialPageRoute(
+        builder: (ctx) => const UserInformationScreen(),
       );
     default:
       return MaterialPageRoute(
