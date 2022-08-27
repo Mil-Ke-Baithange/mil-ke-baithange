@@ -69,6 +69,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '485275093096',
     projectId: 'voip-chat-mkb',
     storageBucket: 'voip-chat-mkb.appspot.com',
+    androidClientId: '485275093096-5ljier126ejume2u00g8ilsqjrl2k59g.apps.googleusercontent.com',
     iosClientId: '485275093096-s25nuubostg1uas1jqh3eihri21tofq8.apps.googleusercontent.com',
     iosBundleId: 'com.example.voipChat',
   );

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "485275093096-5ljier126ejume2u00g8ilsqjrl2k59g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.voip_chat",
+            "certificate_hash": "532aa75b70a6be1b2fbfcd7273d9f632a3867429"
+          }
+        },
+        {
           "client_id": "485275093096-tciksbla1tk5755cop248s07mq8i26fk.apps.googleusercontent.com",
           "client_type": 3
         }

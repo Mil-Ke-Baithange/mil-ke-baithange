@@ -3,7 +3,11 @@ import 'package:voip_chat/common/utils/colors.dart';
 
 class OTPScreen extends StatelessWidget {
   static const String routeName = '/otp-screen';
-  const OTPScreen({Key? key}) : super(key: key);
+  final String verificationId;
+  const OTPScreen({
+    Key? key,
+    required this.verificationId,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
