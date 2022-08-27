@@ -1,11 +1,10 @@
 import 'package:voip_chat/models/home/comment.dart';
-import 'package:voip_chat/models/user/user.dart';
 
 class Post {
-  final User user;
+  final String user; // uid
   final String photoUrl;
   final String? postImage;
-  final Set<User>? likes;
+  final Set<String>? likes; // uid
   final List<Comment>? comments;
   final String? caption;
 

@@ -41,6 +41,12 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>It is important.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>It is important.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>It is important.</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UISupportedInterfaceOrientations</key>

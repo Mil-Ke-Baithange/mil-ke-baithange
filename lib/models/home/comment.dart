@@ -1,9 +1,7 @@
-import 'package:voip_chat/models/user/user.dart';
-
 class Comment {
-  final User user;
+  final String user; // uid
   final String text;
-  final Set<User>? likes;
+  final Set<String>? likes; // uid
   final List<Comment>? replies;
 
   Comment({required this.user, required this.text, this.likes, this.replies});

@@ -1,28 +1,64 @@
 import 'package:voip_chat/models/home/post.dart';
 import 'package:voip_chat/models/user/address.dart';
 
-class User {
+class UserModel {
   final String username;
-  final String firstName;
-  final String lastName;
+  final String name;
+  final String uid;
   final String phoneNumber;
   final Address? address;
-  final String? photoUrl;
+  final String photoUrl;
   final String? email;
-  final List<User> followers;
-  final List<User> following;
+  final List<String> followers; // uid of followers
+  final List<String> following; // uid of following
   final List<Post> posts;
+  final bool isOnline;
+  final List<String> groupId;
 
-  User({
+  UserModel({
     required this.username,
-    required this.firstName,
-    required this.lastName,
+    required this.name,
+    required this.uid,
     required this.phoneNumber,
     this.address,
-    this.photoUrl,
+    required this.photoUrl,
     this.email,
     required this.followers,
     required this.following,
     required this.posts,
+    required this.isOnline,
+    required this.groupId,
   });
+
+  Map<String, dynamic> toMap() {
+    return {
+      'username': username,
+      'name': name,
+      'uid': uid,
+      'phoneNumber': phoneNumber,
+      'address': address,
+      'photoUrl': photoUrl,
+      'email': email,
+      'followers': followers,
+      'following': following,
+      'posts': posts,
+      'isOnline': isOnline,
+      'groupId': groupId,
+    };
+  }
+
+  factory UserModel.fromMap(Map<String, dynamic> map) {
+    return UserModel(
+      username: map['username'],
+      name: map['name'],
+      uid: map['uid'],
+      phoneNumber: map['phoneNumber'],
+      photoUrl: map['photoUrl'],
+      followers: map['followers'],
+      following: map['following'],
+      posts: map['posts'],
+      isOnline: map['isOnline'],
+      groupId: map['groupId'],
+    );
+  }
 }
