@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Mil k Baithange',
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: const HomeScreen(),
+      home: const LandingScreen(),
     );
   }
 }

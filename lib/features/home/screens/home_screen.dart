@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voip_chat/common/utils/colors.dart';
+import 'package:voip_chat/common/widgets/post.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,6 +24,7 @@ class HomeScreen extends StatelessWidget {
         ],
         leading: const Icon(Icons.camera_alt),
       ),
+      body: ListView.builder(itemBuilder: (ctx, i) => PostBox()),
     );
   }
 }
