@@ -9,11 +9,11 @@ class UserModel {
   final Address? address;
   final String photoUrl;
   final String? email;
-  final List<String> followers; // uid of followers
-  final List<String> following; // uid of following
-  final List<Post> posts;
+  final List<dynamic> followers; // uid of followers
+  final List<dynamic> following; // uid of following
+  final List<dynamic> posts;
   final bool isOnline;
-  final List<String> groupId;
+  final List<dynamic> groupId;
 
   UserModel({
     required this.username,

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart' show Firebase;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:voip_chat/common/utils/colors.dart';
+import 'package:voip_chat/common/widgets/error.dart';
+import 'package:voip_chat/common/widgets/loader.dart';
+import 'package:voip_chat/features/auth/controller/auth_controller.dart';
 import 'package:voip_chat/features/home/screens/home_screen.dart';
 import 'package:voip_chat/features/landing/landing_screen.dart';
 import 'package:voip_chat/router.dart' show generateRoute;
@@ -15,14 +19,14 @@ void main() async {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends ConsumerStatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  ConsumerState<MyApp> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends ConsumerState<MyApp> {
   @override
   void initState() {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
@@ -36,7 +40,16 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Mil k Baithange',
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: const LandingScreen(),
+      home: ref.watch(userdataAuthProvider).when(data: (user) {
+        if (user == null) return const LandingScreen();
+        return const HomeScreen();
+      }, error: (error, trace) {
+        return ErrorScreen(
+          error: error.toString(),
+        );
+      }, loading: () {
+        return const Loader();
+      }),
     );
   }
 }
