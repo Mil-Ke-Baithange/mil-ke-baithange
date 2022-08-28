@@ -35,9 +35,9 @@ class LandingScreen extends StatelessWidget {
               ],
             ),
             Image.asset(
-              'assets/images/1.png',
-              height: 340,
-              width: 340,
+              'assets/images/2.png',
+              height: 400,
+              width: 400,
             ),
             Column(children: [
               const Padding(

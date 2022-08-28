@@ -9,22 +9,33 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Title"),
+        title: const Text(
+          "Mil Ke Baithange",
+        ),
         backgroundColor: backgroundColor,
         elevation: 10,
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.search),
+            icon: const Icon(
+              Icons.search,
+            ),
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.chat_outlined),
-          )
+            icon: const Icon(
+              Icons.chat_outlined,
+            ),
+          ),
         ],
-        leading: const Icon(Icons.camera_alt),
+        leading: const Icon(
+          Icons.camera_alt,
+        ),
       ),
-      body: ListView.builder(itemBuilder: (ctx, i) => PostBox()),
+      body: ListView.builder(
+        itemCount: 2,
+        itemBuilder: (ctx, i) => const PostBox(),
+      ),
     );
   }
 }
